@@ -19,6 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        ls -l
         pip install -r requirements.txt
         pip install pytest aws-sam-cli
 
@@ -36,5 +37,4 @@ jobs:
       run: sam build
 
     - name: Deploy SAM application
-      run: sam deploy --no-fail-on-empty-changeset --stack-name your-stack-name --capabilities CAPABILITY_IAM
-
+      run: sam deploy --no-fail-on-empty-changeset --stack-name your-stack-name --capabilities CAPABILITY_sameera-resume
